@@ -1,0 +1,76 @@
+CARA UPDATE APK TDK DASHBOARD KE V18.4 MELALUI GITHUB
+=====================================================
+
+PENTING
+-------
+Upload ISI folder ini ke ROOT repository GitHub Android Anda.
+Jangan membuat susunan 04_ANDROID_REMOTE/.github/... di dalam repo.
+Yang benar di halaman utama repository harus terlihat:
+
+.github/
+app/
+build.gradle.kts
+settings.gradle.kts
+README_REMOTE_WEBVIEW.txt
+BUILD_APK_GITHUB.txt
+
+LANGKAH UPDATE SOURCE DI GITHUB
+-------------------------------
+1. Buka repository Android TDK Dashboard Anda.
+2. Cara paling aman: hapus/ganti file Android lama dengan isi paket V18.4 ini.
+3. Pastikan file berikut terganti:
+   app/src/main/java/com/tigadaun/tdkdashboard/MainActivity.kt
+   app/build.gradle.kts
+   app/src/main/AndroidManifest.xml
+   .github/workflows/build-apk.yml
+4. Pastikan folder .github/workflows berada langsung di root repository.
+5. Commit ke branch main.
+
+BUILD APK
+---------
+1. Klik tab Actions.
+2. Di kiri pilih "Build TDK Dashboard APK".
+3. Klik "Run workflow".
+4. Branch: main.
+5. Klik tombol hijau "Run workflow".
+6. Tunggu sampai centang hijau.
+7. Buka run yang sudah hijau.
+8. Scroll ke bagian Artifacts.
+9. Download artifact:
+   TDK_Dashboard_Remote_V18_4
+10. Extract ZIP artifact.
+11. File APK adalah:
+    app-debug.apk
+
+INSTALL / UPDATE DI HP
+----------------------
+1. Kirim app-debug.apk ke HP.
+2. Tekan APK dan pilih Install/Update.
+3. Package name V18.4 tetap:
+   com.tigadaun.tdkdashboard
+
+JIKA MUNCUL "APP NOT INSTALLED" / KONFLIK SIGNATURE
+---------------------------------------------------
+GitHub debug build lama dapat memakai signature debug yang berbeda.
+Jika Android menolak update:
+1. Hapus TDK Dashboard lama SATU KALI.
+2. Install app-debug.apk V18.4.
+3. Data dashboard tetap aman karena data utama berada di Cloudflare/Supabase.
+
+TES SETELAH INSTALL
+-------------------
+1. Buka TDK Dashboard.
+2. Tekan Download Data.
+3. Progress HTML harus bergerak mengikuti byte nyata.
+4. Jangan lagi berhenti permanen di 96%.
+5. Saat selesai harus muncul:
+   100% DOWNLOAD SELESAI
+6. Android menampilkan dialog:
+   Buka File / Tutup
+7. File tersedia di:
+   Penyimpanan Internal / Download
+
+SETELAH V18.4 TERPASANG
+----------------------
+Perubahan HTML dashboard berikutnya tetap cukup deploy ke Cloudflare.
+Tidak perlu build APK lagi kecuali fitur native Android kembali diubah.

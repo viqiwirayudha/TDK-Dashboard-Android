@@ -1,0 +1,5 @@
+TDK Dashboard Android Remote V18.4
+versionCode=184
+versionName=18.4-native-download
+package=com.tigadaun.tdkdashboard
+URL=https://dashboard-operasional.tigadaunkapuasplasma.workers.dev/
