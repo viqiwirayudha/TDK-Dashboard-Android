@@ -1,0 +1,14 @@
+TDK DASHBOARD ANDROID V18.5 — CARA UPDATE
+
+1. Extract ZIP ini.
+2. Buka https://github.com/viqiwirayudha/TDK-Dashboard-Android
+3. Code → Add file → Upload files.
+4. Upload SELURUH ISI folder hasil extract, termasuk folder .github dan app.
+5. Commit message: Update Android V18.5 icon dan native download
+6. Commit directly to main.
+7. Buka Actions → Build APK V18.5 → Run workflow.
+8. Setelah hijau, buka run → Artifacts → TDK-Dashboard-V18.5.
+9. Download artifact dan extract. File: TDK-Dashboard-V18.5.apk
+10. Install/update di Android. Jika signature APK lama berbeda, hapus versi lama sekali lalu install V18.5.
+
+Setelah install, icon TDK harus muncul di launcher.
