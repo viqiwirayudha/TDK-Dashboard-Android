@@ -1,16 +1,19 @@
-name: Build APK
+name: Build APK V18.4
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "TDK-Dashboard-Source.zip"
+      - "app/**"
+      - "build.gradle.kts"
+      - "settings.gradle.kts"
       - ".github/workflows/build-apk.yml"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
 
@@ -29,16 +32,16 @@ jobs:
         with:
           gradle-version: "8.9"
 
-      - name: Ekstrak source aplikasi
-        run: unzip -o TDK-Dashboard-Source.zip
+      - name: Build APK V18.4
+        run: gradle assembleDebug --stacktrace
 
-      - name: Build APK
-        run: gradle -p TDK-Dashboard-Android assembleDebug --stacktrace
+      - name: Rename APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk TDK-Dashboard-V18.4.apk
 
       - name: Simpan APK
         uses: actions/upload-artifact@v4
         with:
-          name: TDK-Dashboard-APK
-          path: TDK-Dashboard-Android/app/build/outputs/apk/debug/app-debug.apk
+          name: TDK-Dashboard-V18.4
+          path: TDK-Dashboard-V18.4.apk
           if-no-files-found: error
           retention-days: 30
