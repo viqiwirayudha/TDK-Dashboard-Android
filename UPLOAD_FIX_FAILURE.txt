@@ -1,0 +1,5 @@
+1. Extract ZIP.
+2. Upload SEMUA isi folder ke root repo GitHub dan replace file lama.
+3. Commit message: Fix failure Android V18.5.1
+4. Actions -> Build APK V18.5.1 FIX -> Run workflow.
+5. Setelah hijau, download artifact TDK-Dashboard-V18.5.1.

@@ -1,4 +1,4 @@
-TDK Dashboard Android V18.5
-Version Code: 185
-Version Name: 18.5-icon-native-download
-Fitur: launcher icon TDK, adaptive/round icon, splash screen, native DownloadManager progress 0-100%.
+TDK Dashboard Android V18.5.1 FIX FAILURE
+versionCode: 186
+versionName: 18.5.1-fix-build
+Build output: TDK-Dashboard-V18.5.1.apk

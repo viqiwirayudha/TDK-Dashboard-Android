@@ -11,8 +11,8 @@ android {
         applicationId = "com.tigadaun.tdkdashboard"
         minSdk = 24
         targetSdk = 35
-        versionCode = 185
-        versionName = "18.5-icon-native-download"
+        versionCode = 186
+        versionName = "18.5.1-fix-build"
     }
 
     buildTypes {
